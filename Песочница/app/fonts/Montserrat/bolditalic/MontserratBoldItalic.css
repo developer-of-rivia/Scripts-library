@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MontserratBoldItalic';
+    src: url('fonts/MontserratBoldItalic.eot');
+    src: url('fonts/MontserratBoldItalic.eot') format('embedded-opentype'),
+         url('fonts/MontserratBoldItalic.woff2') format('woff2'),
+         url('fonts/MontserratBoldItalic.woff') format('woff'),
+         url('fonts/MontserratBoldItalic.ttf') format('truetype'),
+         url('fonts/MontserratBoldItalic.svg#MontserratBoldItalic') format('svg');
+}

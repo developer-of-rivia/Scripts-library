@@ -1,0 +1,255 @@
+@import "1 vars.sass"
+@import "2 media-mix.sass"
+// btn--size
+.btn--padding-1
+    padding: 8px 16px
+.btn--padding-2
+    padding: 10px 18px
+// btn--background
+.btn--bg-1
+    background: #612BD3
+.btn--bg-2
+    background: #5126AC
+.btn--bg-3
+    background: #D9BA21
+.btn--bg-4
+    background: #FBF5D3
+// btn--border-color
+.btn--bcolor-1
+    border-color: #5126AC
+// btn--text-color
+.btn--tcolor-1
+    color: #fff
+.btn--tcolor-2
+    color: #D9BA21
+// btn--hover
+.btn--hover-1
+    &:hover
+        background: #5126AC
+.btn--hover-2
+    &:hover
+        background: #612BD3
+.btn--hover-3
+    &:hover
+        background: #897513
+// btn--raduis
+.btn--radius1
+    border-radius: 5px
+.btn--radius2
+    border-radius: 50px
+// btn--border
+.btn--borderless
+    border: none
+.btn--border
+    border: 3px solid
+// btn--border-color
+.btn--bcolor-1
+    border-color: #F6E590
+// btn--special
+.btn
+    transition: 0.2s ease
+.btn--disabled
+    background: #DEDBE1
+    color: #7E7984
+// btn на сайте
+.row__button1
+    @extend .btn
+    @extend .btn--bg-1
+    @extend .btn--tcolor-1
+    @extend .btn--radius1
+    @extend .btn--padding-1
+    @extend .btn--hover-1
+.row__button2
+    @extend .btn
+    @extend .btn--bg-2
+    @extend .btn--tcolor-1
+    @extend .btn--radius1
+    @extend .btn--padding-2
+    @extend .btn--hover-2
+.row__button3
+    @extend .btn
+    @extend .btn--bg-1
+    @extend .btn--padding-2
+    @extend .btn--tcolor-1
+    @extend .btn--hover-2
+.row__button4
+    @extend .btn
+    @extend .btn--radius2
+    @extend .btn--hover-3
+    @extend .btn--bg-3
+    @extend .btn--tcolor-1
+    @extend .btn--padding-1
+.row__button5
+    @extend .btn--bcolor-1
+    @extend .btn--border
+    @extend .btn--bg-4
+    @extend .btn--tcolor-1
+    @extend .btn--padding-2
+    @extend .btn--tcolor-2
+/**/
+/**/
+/**/
+/* Чекбокс */
+// checkbox special
+.checkbox--base-1
+    display: flex
+    align-items: center
+// checkbox__input--size
+.checkbox__input--size-1
+    width: 16px
+    height: 16px
+.checkbox__input--size-2
+    width: 20px
+    height: 20px
+// checkbox__input--border
+.checkbox__input--border-1
+    border: 1px solid
+// checkbox__input--bcolor
+.checkbox__input--bcolor
+    border-color: #612BD3
+// checkbox__input special
+.checkbox__input--base-1
+    -webkit-appearance: none
+    -moz-appearance: none
+    display: inline-block
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: center center
+// checkbox__input__hover
+.checkbox__input__hover--1:hover
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1)
+// checkbox__input__checked
+.checkbox__input__checked--1:checked
+    background-image: url(../img/checkbox-checkmark.svg)
+// checkbox__input__disabled
+.checkbox__input__disabled--1:disabled
+    filter: grayscale(80%)
+// checkbox__input--bradius
+.checkbox__input--bradius-1
+    border-radius: 4px
+// checkbox на сайте
+.checkbox
+    @extend .checkbox--base-1
+    margin-bottom: 10px
+.checkbox__input
+    @extend .checkbox__input--base-1
+    @extend .checkbox__input--size-2
+    @extend .checkbox__input--bcolor
+    @extend .checkbox__input--border-1
+    @extend .checkbox__input--bradius-1
+    margin-right: 10px
+.checkbox__input:hover
+    @extend .checkbox__input__hover--1
+.checkbox__input:checked
+    @extend .checkbox__input__checked--1
+.checkbox__input:disabled
+    @extend .checkbox__input__disabled--1
+/**/
+/* Радио кнопка */
+// отключаем инпут
+.radio__input
+    display: none
+// обёртка для кнопки и текста
+.radio label
+    display: flex
+    align-items: center
+    color: green
+// кружочек
+.radio label:before
+    content: ""
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 18px
+    height: 18px
+    border-radius: 50px
+    border: 1px solid #ccc
+// Нажатый
+.radio__input:checked + label:before
+    background: url(../img/checkbox-checkmark.png) no-repeat center center
+// При наводке
+.radio label:hover:before
+    display: inline-block
+// Отключённы
+.radio__input:disabled + label:before
+    filter: grayscale(100%)
+    background: red
+/**/
+/**/
+/* thumbler */
+// поле, в котором будет гоняться ползунок
+.tumbler__switch
+    @extend .tumbler__switch--base-1
+    @extend .tumbler__switch--size-1
+    @extend .tumbler__switch--padding-1
+    @extend .tumbler__switch--bradius-1
+    @extend .tumbler__switch--bg-1
+// сам ползунок
+.tumbler__tumbler
+    @extend .tumbler__tumbler--base-1
+    @extend .tumbler__tumbler--size-1
+    @extend .tumbler__tumbler--bradius-1
+    @extend .tumbler__tumbler--bg-1
+// скрываем инпут
+.tumbler__input
+    display: block
+    width: 0
+    height: 0
+    position: absolute
+    z-index: -1
+    opacity: 0
+    // активное поле
+    &:checked+.tumbler__switch
+        @extend .tumbler__switch-active--1
+    // активный ползунок
+    &:checked+.tumbler__switch > .tumbler__tumbler
+        @extend .tumbler__tumbler-active--1
+/**/
+/* tumbler--base */
+.tumbler--base--1
+    display: flex
+    flex-direction: column
+.tumbler--base--2
+    display: flex
+    flex-direction: row
+/* tumbler__switch--base */
+.tumbler__switch--base-1
+    position: relative
+    display: flex
+    align-items: center
+    cursor: pointer
+    vertical-align: top
+    transition: .2s
+/* tumbler__switch--size */
+.tumbler__switch--size-1
+    width: 36px
+    height: 22px
+/* tumbler__switch--padding */
+.tumbler__switch--padding-1
+    padding: 3px
+/* tumbler__switch--bradius */
+.tumbler__switch--bradius-1
+    border-radius: 50px
+/* tumbler__switch--bg */
+.tumbler__switch--bg-1
+    background: #DBDBDB
+/* tumbler__switch-active */
+.tumbler__switch-active--1
+    background: #75A55F
+/* tumbler__tumbler-active */
+.tumbler__tumbler-active--1
+    transform: translateX(14px)
+/* tumbler__tumbler--size */
+.tumbler__tumbler--size-1
+    width: 16px
+    height: 16px
+/* tumbler__tumbler--base */
+.tumbler__tumbler--base-1
+    display: inline-block
+    transition: .15s
+/* tumbler__tumbler--bradius */
+.tumbler__tumbler--bradius-1
+    border-radius: 50px
+/* tumbler__tumbler--bg */
+.tumbler__tumbler--bg-1
+    background: #fff

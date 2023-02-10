@@ -1,0 +1,28 @@
+// отключаем инпут
+.radio__input
+    display: none
+// обёртка для кнопки и текста
+.radio label
+    display: flex
+    align-items: center
+    color: green
+// кружочек
+.radio label:before
+    content: ""
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 18px
+    height: 18px
+    border-radius: 50px
+    border: 1px solid #ccc
+// Нажатый
+.radio__input:checked + label:before
+    background: url(../img/checkbox-checkmark.png) no-repeat center center
+// При наводке
+.radio label:hover:before
+    display: inline-block
+// Отключённы
+.radio__input:disabled + label:before
+    filter: grayscale(100%)
+    background: red

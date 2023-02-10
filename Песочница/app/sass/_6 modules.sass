@@ -1,0 +1,53 @@
+@import "1 vars.sass"
+@import "2 media-mix.sass"
+/* Body */
+body
+    font-family: 'Roboto'
+
+/* Заголовки */
+.title--def
+    color: #000
+
+/* Кнопки */
+.btn--def
+    display: inline-block
+    &:hover
+        display: inline-block
+
+/* Текст */
+.text--def
+    color: #000
+.text-area
+    p
+        &:last-child
+            margin-bottom: 0
+
+/* Табы */
+.tabs__links--def
+    display: flex
+.tabs__link--def
+    display: inline-block
+
+/* Слайдер */
+.slider-arrows--def
+    display: flex
+    justify-content: space-between
+.slider-dots--def
+    .slick-dots
+        display: flex
+        justify-content: center
+        li
+            margin: 0 5px
+            button
+                display: inline-block
+                background: gray
+                font-size: 0
+                width: 20px
+                height: 20px
+                border-radius: 50px
+                cursor: pointer
+            &.slick-active
+                button
+                    background: green
+.slick-arrow
+    cursor: pointer

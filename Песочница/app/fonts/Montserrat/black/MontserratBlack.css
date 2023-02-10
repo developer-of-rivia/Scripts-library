@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MontserratBlack';
+    src: url('fonts/MontserratBlack.eot');
+    src: url('fonts/MontserratBlack.eot') format('embedded-opentype'),
+         url('fonts/MontserratBlack.woff2') format('woff2'),
+         url('fonts/MontserratBlack.woff') format('woff'),
+         url('fonts/MontserratBlack.ttf') format('truetype'),
+         url('fonts/MontserratBlack.svg#MontserratBlack') format('svg');
+}

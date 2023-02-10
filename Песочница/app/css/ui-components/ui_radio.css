@@ -1,0 +1,27 @@
+.radio__input {
+  display: none; }
+
+.radio label {
+  display: flex;
+  align-items: center;
+  color: green; }
+
+.radio label:before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  border: 1px solid #ccc; }
+
+.radio__input:checked + label:before {
+  background: url(../img/checkbox-checkmark.png) no-repeat center center; }
+
+.radio label:hover:before {
+  display: inline-block; }
+
+.radio__input:disabled + label:before {
+  filter: grayscale(100%);
+  background: red; }

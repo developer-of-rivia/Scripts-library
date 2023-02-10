@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MontserratExtraLightItalic';
+    src: url('fonts/MontserratExtraLightItalic.eot');
+    src: url('fonts/MontserratExtraLightItalic.eot') format('embedded-opentype'),
+         url('fonts/MontserratExtraLightItalic.woff2') format('woff2'),
+         url('fonts/MontserratExtraLightItalic.woff') format('woff'),
+         url('fonts/MontserratExtraLightItalic.ttf') format('truetype'),
+         url('fonts/MontserratExtraLightItalic.svg#MontserratExtraLightItalic') format('svg');
+}
