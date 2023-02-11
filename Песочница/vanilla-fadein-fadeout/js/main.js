@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
+    // работа fadeIn и fadeOut
     const fadeIn = (el, timeout, display) => {
         el.style.opacity = 0;
         el.style.display = display || 'block';
@@ -18,34 +19,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
 
 
+    // привязка fadeIn и fadeOut к конкретным классам
+    const blocks = document.querySelectorAll('.block');
+    const btns = document.querySelectorAll('.btn');
+    let flags = [];
     
-    const block = document.querySelector('.block');
-    const btn = document.querySelector('.btn');
-
-    const block2 = document.querySelector('.block2');
-    const btn2 = document.querySelector('.btn2');
-
-
-    let flag = false;
-    btn.addEventListener('click', (e) => {
-        if (!flag) {
-            fadeIn(block, 1000, 'flex');
-            flag = true;
-        } else {
-            fadeOut(block, 1000);
-            flag = false;
-        }
-    });
-
-
-    let flag2 = false;
-    btn2.addEventListener('click', (e) => {
-        if (!flag2) {
-            fadeIn(block2, 1000, 'flex');
-            flag2 = true;
-        } else {
-            fadeOut(block2, 1000);
-            flag2 = false;
-        }
-    });
+    for(let i = 0; blocks.length > i; i++){
+        flags[i] = false;
+        btns[i].addEventListener('click', (e) => {
+            if (!flags[i]) {
+                fadeIn(blocks[i], 1000, 'flex');
+                flags[i] = true;
+            } else {
+                fadeOut(blocks[i], 1000);
+                flags[i] = false;
+            }
+        });
+    }
 });
