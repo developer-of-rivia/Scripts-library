@@ -22,17 +22,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // привязка fadeIn и fadeOut к конкретным классам
     const blocks = document.querySelectorAll('.block');
     const btns = document.querySelectorAll('.btn');
-    let flags = [];
+    let flags_blocks = [];
     
     for(let i = 0; blocks.length > i; i++){
-        flags[i] = false;
+        flags_blocks[i] = false;
         btns[i].addEventListener('click', (e) => {
-            if (!flags[i]) {
+            if (!flags_blocks[i]) {
                 fadeIn(blocks[i], 1000, 'flex');
-                flags[i] = true;
+                flags_blocks[i] = true;
             } else {
                 fadeOut(blocks[i], 1000);
-                flags[i] = false;
+                flags_blocks[i] = false;
             }
         });
     }
